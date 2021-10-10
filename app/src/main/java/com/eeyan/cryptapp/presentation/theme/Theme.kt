@@ -1,4 +1,4 @@
-package com.eeyan.cryptapp.ui.theme
+package com.eeyan.cryptapp.presentation.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

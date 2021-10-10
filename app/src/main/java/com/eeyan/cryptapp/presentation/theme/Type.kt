@@ -1,4 +1,4 @@
-package com.eeyan.cryptapp.ui.theme
+package com.eeyan.cryptapp.presentation.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
