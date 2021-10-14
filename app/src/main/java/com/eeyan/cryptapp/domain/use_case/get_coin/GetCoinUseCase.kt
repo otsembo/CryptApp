@@ -17,21 +17,19 @@ class GetCoinUseCase
 {
 
         operator fun invoke(coinId:String) : Flow<Resource<CoinDetail>> = flow {
-            //test coins (simply prevent android studio complaints)
-            val sampleCoins : CoinDetail? = null
 
             try{
                 //start loading
-                emit(Resource.Loading(sampleCoins))
+                emit(Resource.Loading<CoinDetail>())
                 //retrieve coins from repo
                 val coin = repository.getCoinById(coinId).toCoinDetail()
                 //success
                 emit(Resource.Success(coin))
             }catch (e : HttpException){
                 //error
-                emit(Resource.Error(e.localizedMessage?: "An unexpected error occurred",sampleCoins))
+                emit(Resource.Error<CoinDetail>(e.localizedMessage?: "An unexpected error occurred"))
             }catch (e: IOException){
-                emit(Resource.Error("Could not reach server! Check internet connection",sampleCoins))
+                emit(Resource.Error<CoinDetail>("Could not reach server! Check internet connection"))
             }
 
         }

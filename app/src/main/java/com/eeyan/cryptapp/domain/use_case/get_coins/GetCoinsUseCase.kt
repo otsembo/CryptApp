@@ -15,21 +15,18 @@ class GetCoinsUseCase
 {
 
         operator fun invoke() : Flow<Resource<List<Coin>>> = flow {
-            //test coins (simply prevent android studio complaints)
-            val sampleCoins : List<Coin> = ArrayList()
-
             try{
                 //start loading
-                emit(Resource.Loading(sampleCoins))
+                emit(Resource.Loading<List<Coin>>())
                 //retrieve coins from repo
                 val coins = repository.getCoins().map { it.toCoin() }
                 //success
                 emit(Resource.Success(coins))
             }catch (e : HttpException){
                 //error
-                emit(Resource.Error(e.localizedMessage?: "An unexpected error occurred",sampleCoins))
+                emit(Resource.Error<List<Coin>>(e.localizedMessage?: "An unexpected error occurred"))
             }catch (e: IOException){
-                emit(Resource.Error("Could not reach server! Check internet connection",sampleCoins))
+                emit(Resource.Error<List<Coin>>("Could not reach server! Check internet connection"))
             }
 
         }

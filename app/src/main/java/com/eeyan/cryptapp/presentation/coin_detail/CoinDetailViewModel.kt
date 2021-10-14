@@ -1,4 +1,4 @@
-package com.eeyan.cryptapp.presentation.coin_detail.components
+package com.eeyan.cryptapp.presentation.coin_detail
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -8,7 +8,6 @@ import androidx.lifecycle.viewModelScope
 import com.eeyan.cryptapp.common.Constants
 import com.eeyan.cryptapp.common.Resource
 import com.eeyan.cryptapp.domain.use_case.get_coin.GetCoinUseCase
-import com.eeyan.cryptapp.domain.use_case.get_coins.GetCoinsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach

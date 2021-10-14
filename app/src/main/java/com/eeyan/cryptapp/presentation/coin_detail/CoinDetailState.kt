@@ -1,4 +1,4 @@
-package com.eeyan.cryptapp.presentation.coin_detail.components
+package com.eeyan.cryptapp.presentation.coin_detail
 
 import com.eeyan.cryptapp.domain.model.Coin
 import com.eeyan.cryptapp.domain.model.CoinDetail

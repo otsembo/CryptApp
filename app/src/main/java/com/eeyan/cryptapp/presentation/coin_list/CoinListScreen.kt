@@ -33,7 +33,7 @@ fun CoinListScreen(
     
     
     //add box
-    Box(modifier = Modifier.fillMaxSize()) {
+    Box(modifier = Modifier.fillMaxSize().padding(5.dp)) {
 
         LazyColumn(modifier = Modifier.fillMaxSize()){
 
