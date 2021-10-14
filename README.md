@@ -1,6 +1,18 @@
 # CryptApp
 This is an Android application built with Jetpack Compose. The application can be used to get information about the latest cryptocurrencies.
 
+## Architecture
+The application has been built based on two key principles:
+<ul>
+  <li> 
+    <a href = "https://developer.android.com/jetpack/guide?gclid=Cj0KCQjwqp-LBhDQARIsAO0a6aIVDZW3kW0MdIhKfoNmc7OaNgyx9bt7vy6_XeRrkdFsJN4ePMxZwysaAl6xEALw_wcB&gclsrc=aw.ds"> Android App Architecture (MVVM) by Google </a></li>
+  <li>
+    <a href="https://medium.com/android-dev-hacks/detailed-guide-on-android-clean-architecture-9eab262a9011">
+      Clean Architecture as recommended by Uncle Bob
+    </a>
+  </li>
+</ul>
+
 ## Tools
 The application was built with the following tools:
 
