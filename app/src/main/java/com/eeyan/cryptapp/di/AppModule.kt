@@ -20,6 +20,12 @@ import java.util.concurrent.TimeUnit
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
+    @Singleton
+    @Provides
+    fun provideLoggingInterceptor(): HttpLoggingInterceptor {
+        return HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+    }
+
     @Provides
     @Singleton
     fun providePaprikaApi(okHttpClient: OkHttpClient): CoinPaprikaApi {
