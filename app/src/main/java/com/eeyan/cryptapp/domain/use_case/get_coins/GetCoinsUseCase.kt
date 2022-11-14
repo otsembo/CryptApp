@@ -1,7 +1,7 @@
 package com.eeyan.cryptapp.domain.use_case.get_coins
 
 import com.eeyan.cryptapp.common.Resource
-import com.eeyan.cryptapp.data.remote.dto.toCoin
+import com.eeyan.cryptapp.data.mappers.toCoin
 import com.eeyan.cryptapp.domain.repository.CoinRepository
 import com.eeyan.cryptapp.domain.model.Coin
 import kotlinx.coroutines.flow.Flow
