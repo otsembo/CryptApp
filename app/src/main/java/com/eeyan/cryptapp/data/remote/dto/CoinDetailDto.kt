@@ -11,7 +11,8 @@ data class CoinDetailDto(
     val hash_algorithm: String,
     @SerializedName("id")
     val coinId: String,
-    val is_active: Boolean,
+    @SerializedName("is_active")
+    val isActive: Boolean,
     val is_new: Boolean,
     val last_data_at: String,
     val links: Links,
