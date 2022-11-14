@@ -1,6 +1,7 @@
 package com.eeyan.cryptapp.data.remote.dto
 
 import com.eeyan.cryptapp.domain.model.CoinDetail
+import com.google.gson.annotations.SerializedName
 
 data class CoinDetailDto(
     val description: String,
@@ -8,7 +9,8 @@ data class CoinDetailDto(
     val first_data_at: String,
     val hardware_wallet: Boolean,
     val hash_algorithm: String,
-    val id: String,
+    @SerializedName("id")
+    val coinId: String,
     val is_active: Boolean,
     val is_new: Boolean,
     val last_data_at: String,
@@ -28,15 +30,3 @@ data class CoinDetailDto(
     val whitepaper: Whitepaper
 )
 
-fun CoinDetailDto.toCoinDetail() : CoinDetail{
-    return CoinDetail(
-        coinId = id,
-        name = name,
-        description = description,
-        symbol = symbol,
-        rank = rank,
-        team = team,
-        tags = tags.map { it.name },
-        isActive = is_active
-    )
-}
