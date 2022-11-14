@@ -2,8 +2,8 @@ package com.eeyan.cryptapp.di
 
 import com.eeyan.cryptapp.common.Constants
 import com.eeyan.cryptapp.data.remote.CoinPaprikaApi
-import com.eeyan.cryptapp.data.repository.CoinRepository
-import com.eeyan.cryptapp.domain.repository.CoinRepositoryImpl
+import com.eeyan.cryptapp.domain.repository.CoinRepository
+import com.eeyan.cryptapp.data.repository.CoinRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -30,7 +30,7 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideCoinRepository(api: CoinPaprikaApi) : CoinRepository{
+    fun provideCoinRepository(api: CoinPaprikaApi) : CoinRepository {
         return CoinRepositoryImpl(api)
     }
 
