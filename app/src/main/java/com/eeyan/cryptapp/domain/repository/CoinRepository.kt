@@ -1,4 +1,4 @@
-package com.eeyan.cryptapp.data.repository
+package com.eeyan.cryptapp.domain.repository
 
 import com.eeyan.cryptapp.data.remote.dto.CoinDetailDto
 import com.eeyan.cryptapp.data.remote.dto.CoinDto

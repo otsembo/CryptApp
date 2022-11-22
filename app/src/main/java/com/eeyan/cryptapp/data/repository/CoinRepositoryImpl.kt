@@ -1,9 +1,9 @@
-package com.eeyan.cryptapp.domain.repository
+package com.eeyan.cryptapp.data.repository
 
 import com.eeyan.cryptapp.data.remote.CoinPaprikaApi
 import com.eeyan.cryptapp.data.remote.dto.CoinDetailDto
 import com.eeyan.cryptapp.data.remote.dto.CoinDto
-import com.eeyan.cryptapp.data.repository.CoinRepository
+import com.eeyan.cryptapp.domain.repository.CoinRepository
 import javax.inject.Inject
 
 class CoinRepositoryImpl
@@ -16,6 +16,4 @@ class CoinRepositoryImpl
     override suspend fun getCoinById(id: String): CoinDetailDto {
         return api.getCoinById(id)
     }
-
-
 }

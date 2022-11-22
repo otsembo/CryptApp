@@ -1,6 +1,6 @@
 package com.eeyan.cryptapp.data.remote.dto
 
-import com.eeyan.cryptapp.domain.model.Coin
+
 
 data class CoinDto(
     val id: String,
@@ -12,8 +12,3 @@ data class CoinDto(
     val type: String
 )
 
-fun CoinDto.toCoin() : Coin{
-    return Coin(
-        id, is_active, name, rank, symbol
-    )
-}
